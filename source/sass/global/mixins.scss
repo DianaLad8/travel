@@ -1,0 +1,169 @@
+@mixin center {
+  margin: 0 auto;
+  padding: 100px 120px;
+  min-width: 1440px;
+
+  @media (max-width: $desktop) {
+    padding: 40px 45px;
+    min-width: 768px;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 20px 15px;
+    min-width: 320px;
+  }
+}
+
+@mixin list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin title {
+  margin: 0;
+  font-family: $font-family;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 100%;
+  color: $primary;
+
+  @media (max-width: $desktop) {
+    font-size: 25px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 22px;
+  }
+}
+
+@mixin btn {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+  color: $white-100;
+  text-align: center;
+  text-decoration: none;
+  background-color: $additional-100;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: color, background 0.3s ease;
+
+  &:hover {
+    color: $active;
+    background-color: $white-100;
+    outline: 1px solid $active;
+  }
+
+  &:focus {
+    color: $active;
+    background-color: $white-100;
+    outline: none;
+  }
+
+  &:active {
+    color: $white-100;
+    background-color: $active;
+  }
+
+  &:disabled {
+    color: $white-100;
+    background-color: $disabled;
+  }
+}
+
+@mixin link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  color: $primary;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    color: $additional-20;
+  }
+
+  &:focus {
+    color: $additional-100;
+    outline: none;
+  }
+
+  &:active {
+    color: $active;
+  }
+
+  &:disabled {
+    color: $disabled;
+  }
+}
+
+@mixin link-blue {
+  @include link;
+
+  color: $white-100;
+
+  &:hover {
+    color: $white-50;
+  }
+
+  &:focus {
+    color: $primary;
+  }
+}
+
+@mixin bg-mask($name) {
+  display: block;
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  border: none;
+  mask-image: url("/__spritemap#sprite-#{$name}-view");
+  mask-size: 26px 20px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: $white-100;
+
+  &:hover {
+    background-color: $white-50;
+  }
+
+  &:focus {
+    background-color: $primary;
+  }
+
+  &:active {
+    background-color: $active;
+  }
+}
+
+@mixin bg-icon($name) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 133%;
+
+  &::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    mask-image: url("/__spritemap#sprite-#{$name}-view");
+    mask-size: 12px 12px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $white-50;
+  }
+}

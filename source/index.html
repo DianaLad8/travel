@@ -4,27 +4,197 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUPERGYM</title>
+    <title>LIFETOUR</title>
+    <meta name="description" content="Организация походов в горы">
+    <link rel="icon" href="favicon32.ico">
+    <link rel="icon" type="image/png" href="img/favicon32.png">
+    <link rel="preload" href="./fonts/montserrat-bold.ttf" type="font/ttf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/montserrat-extra-bold.ttf" type="font/ttf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/montserrat-light.ttf" type="font/ttf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/montserrat-medium.ttf" type="font/ttf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/montserrat-regular.ttf" type="font/ttf" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/montserrat-semi-bold.ttf" type="font/ttf" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="sass/style.scss">
   </head>
 
   <body class="page-body">
+    <header class="header" data-test="header">
+      <div class="header__wrapper">
+        <div class="header__logo">
+          <svg width="142" height="42" role="img" aria-label="Логотип сайта" focusable="false">
+            <use href="/__spritemap#sprite-logo"></use>
+          </svg>
+        </div>
+        <nav class="header__nav nav">
+          <button class="nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#tours">Туры</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#training">Обучение</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#about">О нас</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#reviews">Отзывы</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#gallery">Фотографии</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <a class="header__tel" href="tel:88000000000">
+          8 800 000-00-00</a>
+      </div>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Организация походов в горы</h1>
+      <section class="hero" data-test="hero">
+        <h2 class="visually-hidden">Самые красивые и популярные походы в горы</h2>
+        <div class="hero__slider swiper">
+          <div class="hero__wrapper swiper-wrapper">
+            <div class="hero__slide swiper-slide">
+              <div class="hero__picture-fond">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="./img/hero/desktop-hero-slide1@1x.webp 1x, ./img/hero/desktop-hero-slide1@2x.webp 2x" width="1440" height="800">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/hero/tablet-hero-slide1@1x.webp 1x, ./img/hero/tablet-hero-slide1@2x.webp 2x" width="768" height="1034">
+                  <source type="image/webp" srcset="./img/hero/mobile-hero-slide1@1x.webp 1x, ./img/hero/mobile-hero-slide1@2x.webp 2x" width="320" height="568">
+                  <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/hero/desktop-hero-slide1@1x.jpg 1x, ./img/hero/desktop-hero-slide1@2x.jpg 2x" width="1440" height="800">
+                  <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/hero/tablet-hero-slide1@1x.jpg 1x, ./img/hero/tablet-hero-slide1@2x.jpg 2x" width="768" height="1034">
+                  <img src="./img/hero/mobile-hero-slide1@1x.jpg" srcset="./img/hero/mobile-hero-slide1@2x.jpg 2x" width="320" height="568" alt="Фотография Кавказких гор.">
+                </picture>
+              </div>
+              <div class="hero__container">
+                <div class="hero__text">
+                  <div class="hero__content">
+                    <h3>Захватывающие  вершины Кавказа</h3>
+                    <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.</p>
+                  </div>
+                  <a class="hero__link"  href="#">Смотреть тур</a>
+                </div>
+                <div class="hero__details">
+                  <p class="hero__duration">6 дней/5 ночей</p>
+                  <p class="hero__duration hero__duration--level">Высокая сложность</p>
+                </div>
+              </div>
+            </div>
+            <div class="hero__slide swiper-slide">
+              <div class="hero__picture-fond">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="./img/hero/desktop-hero-slide2@1x.webp 1x, ./img/hero/desktop-hero-slide2@2x.webp 2x" width="1440" height="800">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/hero/tablet-hero-slide2@1x.webp 1x, ./img/hero/tablet-hero-slide2@2x.webp 2x" width="768" height="1034">
+                  <source type="image/webp" srcset="./img/hero/mobile-hero-slide2@1x.webp 1x, ./img/hero/mobile-hero-slide2@2x.webp 2x" width="320" height="568">
+                  <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/hero/desktop-hero-slide2@1x.jpg 1x, ./img/hero/desktop-hero-slide2@2x.jpg 2x" width="1440" height="800">
+                  <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/hero/tablet-hero-slide2@1x.jpg 1x, ./img/hero/tablet-hero-slide2@2x.jpg 2x" width="768" height="1034">
+                  <img src="./img/hero/mobile-hero-slide1@2x.jpg" srcset="./img/hero/mobile-hero-slide2@2x.jpg 2x" width="320" height="568" alt="Фотография Кавказких гор.">
+                </picture>
+              </div>
+              <div class="hero__container">
+                <div class="hero__text">
+                  <div class="hero__content">
+                    <h3>Невероятная
+                      природа Камчатки</h3>
+                    <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой природы в мире.</p>
+                  </div>
+                  <a class="hero__link"  href="#">Смотреть тур</a>
+                </div>
+                <div class="hero__details">
+                  <p class="hero__duration">9 дней/10 ночей</p>
+                  <p class="hero__duration hero__duration--level">Средняя сложность</p>
+                </div>
+              </div>
+            </div>
+            <div class="hero__slide swiper-slide">
+              <div class="hero__picture-fond">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="./img/hero/desktop-hero-slide3@1x.webp 1x, ./img/hero/desktop-hero-slide3@2x.webp 2x" width="1440" height="800">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/hero/tablet-hero-slide3@1x.webp 1x, ./img/hero/tablet-hero-slide3@2x.webp 2x" width="768" height="1034">
+                  <source type="image/webp" srcset="./img/hero/mobile-hero-slide3@1x.webp 1x, ./img/hero/mobile-hero-slide3@2x.webp 2x" width="320" height="568">
+                  <source type="image/jpeg" media="(min-width: 1440px)" srcset="./img/hero/desktop-hero-slide3@1x.jpg 1x, ./img/hero/desktop-hero-slide3@2x.jpg 2x" width="1440" height="800">
+                  <source type="image/jpeg" media="(min-width: 768px)" srcset="./img/hero/tablet-hero-slide3@1x.jpg 1x, ./img/hero/tablet-hero-slide3@2x.jpg 2x" width="768" height="1034">
+                  <img src="./img/hero/mobile-hero-slide3@1x.jpg" srcset="./img/hero/mobile-hero-slide3@2x.jpg 2x" width="320" height="568" alt="Фотография Кавказких гор.">
+                </picture>
+              </div>
+              <div class="hero__container">
+                <div class="hero__text">
+                  <div class="hero__content">
+                    <h3>Магические пейзажи Алтайского Края</h3>
+                    <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических  и захватывающих дух ландшафтов Алтайских гор.</p>
+                  </div>
+                  <a class="hero__link"  href="#">Смотреть тур</a>
+                </div>
+                <div class="hero__details">
+                  <p class="hero__duration">8 дней/7 ночей</p>
+                  <p class="hero__duration hero__duration--level">Лёгкая сложность</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="hero__pagination swiper-pagination"></div>
+        </div>
+      </section>
+      <section class="tours" data-test="tours" id="tours">
+        <div class="tours__headline">
+          <h2 class="title">Ближайшие туры</h2>
+          <span class="title__shadow" role="presentation">Ближайшие туры</span>
+        </div>
+      </section>
+
+      <section class="training" data-test="training" id="training">
+        <div class="training__headline">
+          <h2 class="title">Обучение</h2>
+          <span class="title__shadow" role="presentation">Обучение</span>
+        </div>
+      </section>
+      <section class="about" data-test="about" id="about">
+        <div class="about__headline">
+          <h2 class="title">О нас</h2>
+          <span class="title__shadow" role="presentation">О нас</span>
+        </div>
+      </section>
+      <section class="reviews" data-test="reviews" id="reviews">
+        <div class="reviews__headline">
+          <h2 class="title">Отзывы</h2>
+          <span class="title__shadow" role="presentation">Отзывы</span>
+        </div>
+      </section>
+      <section class="gallery" data-test="gallery" id="gallery">
+        <div class="gallery__headline">
+          <h2 class="title">Фотогалерея</h2>
+          <span class="title__shadow" role="presentation">Фотогалерея</span>
+        </div>
+      </section>
+
+      <div data-test="adv">adv</div>
+      <div data-test="form">form</div>
+    </main>
+
+    <footer class="footer" data-test="footer">
+      <section class="contacts" id="contacts">
+        <div class="contacts__headline">
+          <h2 class="title">Контакты</h2>
+          <span class="title__shadow" role="presentation">Контакты</span>
+        </div>
+      </section>
+      <div class="footer__logo">
+        <svg width="142" height="42" role="img" aria-label="Логотип сайта" focusable="false">
+          <use href="/__spritemap#sprite-logo"></use>
+        </svg>
+      </div>
+    </footer>
     <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
+    <img class="logo" src="/__spritemap#sprite-logo-view" alt="Это спрайт">
     <svg>
       <use href="/__spritemap#sprite-user"></use>
     </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="header">header</div>
-    <div data-test="hero">hero</div>
-    <div data-test="tours">tours</div>
-    <div data-test="training">training</div>
-    <div data-test="about">about</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="adv">adv</div>
-    <div data-test="gallery">gallery</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
     <script type="module" src="js/main.js"></script>
   </body>
 
